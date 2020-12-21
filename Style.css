@@ -1,0 +1,557 @@
+*{
+	margin: 0 ;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none!important;
+}
+
+body{
+	margin: 0;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #abf2ee;
+	font-family: 'JetBrains Mono', monospace;
+}
+
+.logo {
+    color: #e8ca4f;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.logo a{
+	color: #e8ca4f;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: #e8ca4f;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.lines {
+    display: none;
+}
+
+.lines div {
+    width: 25px;
+    height: 3px;
+    background-color: #e8ca4f;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px){
+	.nav-links{
+		width: 60%;
+	}
+}
+
+@media screen and (max-width: 768px){
+	body, html {
+		overflow-x: hidden;
+	}
+
+	.nav-links {
+        position: fixed;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #abf2ee;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    
+    .nav-links li {
+        opacity: 0;
+    }
+
+	.lines {
+        display: block;
+        cursor: pointer;
+    }
+
+	.price {
+		margin-top: 20px;
+	    padding: 30px;
+	}
+	
+	.price .contentp .box{
+		margin-bottom: 30px
+	}
+
+	.QandA, .About, .Contact{
+		margin-top: 60px;
+	    padding: 30px;
+	}
+
+	.QandA .contentqad .advantages{
+		margin: 0px;
+		width: 100%
+	}	
+
+	.Contact .contentc .block p{
+		padding: 10px;	
+	}
+
+	.About .contenta .about .block1	{
+		margin: 1rem;
+		width: 15rem
+	}
+
+	.About .contenta .about .form .name {
+		width: 200px
+	}
+
+	footer .main-content{
+		flex-direction: column;
+}
+
+	.main-content .boxes {
+    	text-align: center
+    }
+
+	.Ilkhamimage .Ilkham {
+    	width: 200%;
+	}
+
+	.About .contenta .DISCOUNT .block1 .img {
+    	margin-left: 30%;
+    }
+
+    .teachers{
+		margin-top: 20px;
+    	padding: 30px
+    }
+
+	.teachers .contentt .teach .p{
+  	    padding-left: 30px;
+  	    padding-right: 30px;
+	}
+
+	.teachers .contentt .teach .imgt{
+  	    margin-left: 10%;
+  	    width: 80%
+  }
+}
+
+.nav-active{
+	transform: translateX(0%);
+}
+
+.Ilkham{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+  	width: 55%;
+}
+
+footer{
+	bottom: 0px;
+	width: 100%;
+	background: #abf2ee;
+}
+
+.main-content{
+	display: flex;
+}
+
+.main-content .boxes{
+	flex-basis: 50%;
+	padding: 5px 20px;
+}
+
+.boxes .content{
+	margin: 10px 0 0 0;
+}
+
+.left .content .social{
+	margin: 20px 0 0 0;
+}
+
+.left .content .social a{
+ 	padding: 0 2px;
+}
+
+.left .content a i{
+ 	height: 30px;
+ 	width: 30px;
+ 	background: #90DEDA;
+ 	line-height: 30px;
+ 	text-align: center;
+ 	font-size: 18px;
+ 	border-radius: 5px; 
+ 	transition: 0.3s;
+}
+
+.fa-instagram, .fa-envelope{
+	color: black;
+}
+
+.left  .content a i:hover{
+ 	background: #2D77A9; 
+}
+
+.center .social p{
+	padding-top: 10px;
+}
+
+.right p{
+	padding-top: 10px;
+}
+
+@keyframes navLinkFade{
+	from{
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	to{
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+section{
+	padding: 100px;
+}
+
+.price .contentp{
+	display: flex;
+	justify-content: center;
+	margin-top: 40px;
+	flex-direction: column;
+}
+
+.price .contentp .box{
+	width: 100%;
+	border: 15px solid #fff;
+	box-shadow: 0 5px 35px rgba(0,0,0,0.08);
+	background-color: #DCFAF9;
+	margin-bottom: 30px
+}
+
+h1,h2, h3, h4, p{
+	font-family: 'JetBrains Mono', monospace;
+}
+
+.price .contentp .box h2{
+	padding-left: 30px;
+	padding-top: 30px;
+}
+
+.price .contentp .box ul{
+	padding-left: 50px;
+	padding-bottom: 30px;
+	font-family: 'JetBrains Mono', monospace;
+}
+
+.contentc .block .info{
+	font-weight: bold;
+}
+
+.Contact .contentc{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.Contact .contentc .block{
+	width: 100%;
+	height: 100%;
+	border: 15px solid #fff;
+	background-color: #DCFAF9;
+	box-shadow: 0 5px 35px rgba(0,0,0,0.08);
+
+}
+
+.Contact .contentc .contacth2{
+	padding-top: 10px;
+	text-align: center;
+}
+
+.Contact .contentc .contactp{
+	padding-left: 50px;
+	padding-bottom: 30px
+}
+
+.Contact .contentc .block-map{
+	width: 100%;
+	height: 400px;
+	flex:50%;
+	margin-top: 30px
+}
+
+.Contact .contentc .block-map iframe{
+	width: 100%;
+	height: 100%;
+}
+
+.About .contenta{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.About .contenta .about{
+	width: 100%;
+	border: 15px solid #fff;
+	box-shadow: 0 5px 35px rgba(0,0,0,0.08);
+	background-color: #DCFAF9;
+	margin-bottom: 30px
+}
+
+.About .contenta .about h2{
+	padding-top: 20px;
+	text-align: center;
+}
+
+.About .contenta .about .aboutp{
+	padding: 30px
+}
+
+.heading{
+	margin-bottom: 20px
+}
+
+.video-container{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.video-container .video{
+	width: 25rem;
+	margin: 2rem;
+	box-shadow: 0 .5rem 1rem rgba(0,0,0,.5);
+	overflow: hidden;
+}
+
+.video-container .video video{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+
+.video-container .video .active{
+	position: fixed;
+	top: 50%; left:50%;
+	transform: translate(-50%, -50%);
+	height: auto;
+	width: 80%;
+	box-shadow: 0 0 0 100vh rgba(0,0,0,0.7);
+	z-index: 1;
+}
+
+.video-container .video .active:hover{
+	transition: none;
+	transform: translate(-50%, -50%) scale(1);
+}
+
+.QandA .contentqa{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.QandA .contentqa .container-QA{
+	width: 100%;
+	border: 15px solid #fff;
+	box-shadow: 0 5px 35px rgba(0,0,0,0.08);
+	background-color: #DCFAF9;
+	padding: 30px;
+}
+
+.QandA .contentqa .container-QA h2{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+.QandA .contentqa .container-QA .QA{
+	width: 100%;
+	padding:  15px;
+	border: 3px solid white;
+	cursor: pointer;
+	border-radius: 40px;
+	display: flex;
+	margin: 20px 0;
+	align-items: center;
+}
+
+.QandA .contentqa .container-QA .QA .Q{
+	margin: 0 10px 0 0;
+	width: 20px;
+	height: 20px;
+	background: white;
+	border-radius: 6px;
+	transition: all .5s ease-in;
+}
+
+.QandA .contentqa .container-QA .A{
+	padding: 0 15px;
+	border-left: 3px solid white;
+	margin-left: 25px;
+	font-size: 14px;
+	text-align: justify;
+	overflow: hidden;
+	max-height: 0px;
+	transition: all 0.2s ease-in;
+}
+
+h4{
+	font-size: 18px;
+}
+
+.QandA .contentqad{
+	flex-direction: column;
+}
+
+.QandA .contentqad .adh2{
+	text-align: center;
+	margin-bottom: 30px
+}
+
+
+.QandA .contentqad .advantages{
+	margin-bottom: 40px;
+	display: inline-table;
+	border: 15px solid #fff;
+	box-shadow: 0 5px 35px rgba(0,0,0,0.08);
+	background-color: #DCFAF9;
+	padding: 30px;	
+}
+
+.about .block1{
+	display: inline-table;
+	width: 100%;
+}
+
+.about .discount h1{
+	padding-top: 30px;
+	padding-bottom: 50px;
+	text-align: center;
+}
+
+.about .discount h3{
+	text-align: center;
+	padding-bottom: 50px
+}
+
+.img{
+ 	margin-left: 46%;
+ 	padding-bottom: 30px
+}
+
+.image{
+	width: 100px;
+	height: 100px;
+}
+
+.instagram{
+	color: red
+}
+
+.blink{
+    animation: blink 1.5s infinite;
+    color: red
+}
+
+   @keyframes blink {
+    from { 
+    	opacity: 1;
+    }
+    to { 
+    	opacity: 0;
+    }
+   }
+
+.teachers .contentt{
+	display: flex;
+	justify-content: center;
+	margin-top: 40px;
+	flex-direction: column;
+}
+
+.teachers .contentt .teach{
+	width: 100%;
+	border: 15px solid #fff;
+	box-shadow: 0 5px 35px rgba(0,0,0,0.08);
+	background-color: #DCFAF9;
+	margin-bottom: 30px
+}
+
+.Khalinurh2, .Gulmira2{
+	text-align: center;
+	padding: 30px
+}
+
+.teachers .contentt .teach img {
+	display: block;
+	width: 30%;
+	height: 400px;
+	align-items: center;
+	margin-left: 35%;
+	object-fit: cover;
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: -webkit-transform 0.5s;
+	-o-transition: transform 0.5s;
+	transition: transform 0.5s;
+	transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.teachers .contentt .teach p{
+	padding: 50px
+}
+
+.teachers .contentt .teach .imgt:hover{
+	-webkit-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+
+
+
+
+
+
